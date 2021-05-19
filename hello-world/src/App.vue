@@ -6,6 +6,7 @@
   <h2 v-bind:class="status">Status</h2>
   <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2>
   <h2 v-bind:class="isSoldOut ? 'sold-out' : 'new'">Soldout</h2>
+  <h2 v-bind:class="['new', 'promoted']">Newly Promoted Movie</h2>
   <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 

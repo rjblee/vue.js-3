@@ -1,17 +1,17 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <h2 v-bind:id="headingId">Heading</h2>
-  <button v-bind:disabled="isDisabled">Bind</button>
+  <h2 :id="headingId">Heading</h2>
+  <button :disabled="isDisabled">Bind</button>
   <h2 class="underline">Underlined Text</h2>
-  <h2 v-bind:class="status">Status</h2>
-  <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2>
-  <h2 v-bind:class="isSoldOut ? 'sold-out' : 'new'">Soldout</h2>
-  <h2 v-bind:class="['new', 'promoted']">Newly Promoted Movie</h2>
-  <h2 v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']">
+  <h2 :class="status">Status</h2>
+  <h2 :class="isPromoted && 'promoted'">Promoted Movie</h2>
+  <h2 :class="isSoldOut ? 'sold-out' : 'new'">Soldout</h2>
+  <h2 :class="['new', 'promoted']">Newly Promoted Movie</h2>
+  <h2 :class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']">
     Array conditional movie
   </h2>
   <h2
-    v-bind:class="{
+    :class="{
       promoted: isPromoted,
       new: !isSoldOut,
       'sold-out': isSoldout,
@@ -21,7 +21,7 @@
   </h2>
 
   <h2
-    v-bind:style="{
+    :style="{
       color: highlightColor,
       'font-size': headerSize + 'px',
       padding: '20px',
@@ -29,10 +29,10 @@
   >
     Inline style
   </h2>
-  <h2 v-bind:style="headerStyleObject">Style Object</h2>
+  <h2 :style="headerStyleObject">Style Object</h2>
 
-  <div v-bind:style="[baseStyleObject, successStyleObject]">Success Style</div>
-  <div v-bind:style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
+  <div :style="[baseStyleObject, successStyleObject]">Success Style</div>
+  <div :style="[baseStyleObject, dangerStyleObject]">Danger Style</div>
 
   <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>

@@ -29,6 +29,7 @@
   >
     Inline style
   </h2>
+  <h2 v-bind:style="headerStyleObject">Style Object</h2>
   <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 
@@ -49,6 +50,11 @@ export default {
       isSoldOut: true,
       highlightColor: "orange",
       headerSize: 50,
+      headerStyleObject: {
+        color: "orange",
+        fontSize: "50px",
+        padding: "20px",
+      },
     };
   },
 };

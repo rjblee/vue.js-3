@@ -7,6 +7,18 @@
   <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2>
   <h2 v-bind:class="isSoldOut ? 'sold-out' : 'new'">Soldout</h2>
   <h2 v-bind:class="['new', 'promoted']">Newly Promoted Movie</h2>
+  <h2 v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']">
+    Array conditional movie
+  </h2>
+  <h2
+    v-bind:class="{
+      promoted: isPromoted,
+      new: !isSoldOut,
+      'sold-out': isSoldout,
+    }"
+  >
+    Object conditional movie
+  </h2>
   <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 

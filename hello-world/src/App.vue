@@ -19,6 +19,8 @@
   >
     Object conditional movie
   </h2>
+
+  <h2 v-bind:style="{ color: highlightColor }">Inline style</h2>
   <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 
@@ -37,6 +39,7 @@ export default {
       status: "success",
       isPromoted: true,
       isSoldOut: true,
+      highlightColor: "orange",
     };
   },
 };

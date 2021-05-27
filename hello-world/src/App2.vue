@@ -3,6 +3,15 @@
   <h2 v-else-if="num < 0">The number is negative</h2>
   <h2 v-else-if="num > 0">The number is positive</h2>
   <h2 v-else>Not a number</h2>
+
+  <div v-if="display">
+    <h2>Ralph</h2>
+    <h2>Ralph2</h2>
+    <h2>Ralph3</h2>
+  </div>
+
+  <h2 v-show="showElement">Using v-show</h2>
+  <h2 v-if="showElement">Using v-if</h2>
 </template>
 
 <script>
@@ -10,7 +19,9 @@ export default {
   name: "App2",
   data() {
     return {
-      num: 1,
+      num: "Hi",
+      display: true,
+      showElement: true,
     };
   },
 };

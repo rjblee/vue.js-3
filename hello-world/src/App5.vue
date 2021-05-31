@@ -20,6 +20,16 @@
         <option value="usa">USA</option>
       </select>
     </div>
+
+    <div>
+      <input
+        type="checkbox"
+        name=""
+        id="remoteWork"
+        v-model="formValues.remoteWork"
+      />
+      <label for="remoteWork">Open to remote work?</label>
+    </div>
   </div>
 </template>
 
@@ -32,6 +42,7 @@ export default {
         profileSummary: "",
         country: "",
         jobLocation: [],
+        remoteWork: false,
       },
     };
   },

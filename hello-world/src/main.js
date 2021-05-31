@@ -1,5 +1,5 @@
 import { createApp } from "vue";
 // import App from "./App.vue";
-import App4 from "./App4.vue";
+import App5 from "./App5.vue";
 
-createApp(App4).mount("#app");
+createApp(App5).mount("#app");

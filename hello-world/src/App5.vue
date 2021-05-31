@@ -24,7 +24,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      formValues: {
+        name: "",
+        profileSummary: "",
+        country: "",
+        jobLocation: [],
+      },
+    };
+  },
+  methods: {},
+};
 </script>
 
 <style></style>

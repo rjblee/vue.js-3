@@ -4,10 +4,10 @@
       >{{ JSON.stringify(formValues, null, 2) }}
     </pre>
   </div>
-  <form @submit="submitForm">
+  <form @submit.prevent="submitForm">
     <div>
       <label for="name">Name</label><br />
-      <input type="text" id="name" v-model="formValues.name" />
+      <input type="text" id="name" v-model.trim="formValues.name" />
     </div>
     <br />
     <div>
@@ -102,7 +102,6 @@ export default {
   },
   methods: {
     submitForm() {
-      event.preventDefault();
       console.log("Form Values", this.formValues);
     },
   },

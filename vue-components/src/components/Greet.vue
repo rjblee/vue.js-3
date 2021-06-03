@@ -1,12 +1,11 @@
 <template>
-  <div>
-    Hi Ralph
-  </div>
+  <div>Hi {{ name }} aka {{ heroName }}</div>
 </template>
 
 <script>
 export default {
   name: "Ralph",
+  props: ["name", "heroName"],
 };
 </script>
 

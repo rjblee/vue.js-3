@@ -3,7 +3,12 @@
   <Greet name="Andy" heroName="Batman" />
   <Greet name="Tommy" heroName="Superman" /> -->
 
-  <Article title="Article Title" :likes="50" :isPublished="true"></Article>
+  <Article
+    id="my-article"
+    title="Article Title"
+    :likes="50"
+    :isPublished="true"
+  ></Article>
 </template>
 
 <script>

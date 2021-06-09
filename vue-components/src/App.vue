@@ -1,25 +1,24 @@
 <template>
-  <!-- <Greet name="Ralph" heroName="Spiderman" />
-  <Greet name="Andy" heroName="Batman" />
-  <Greet name="Tommy" heroName="Superman" /> -->
-
-  <Article
-    id="my-article"
-    title="Article Title"
-    :likes="50"
-    :isPublished="true"
-  ></Article>
+  <button @click="showPopup = true">Show Popup</button>
+  <Popup v-show="showPopup" @close="showPopup = false" />
 </template>
 
 <script>
 // import Greet from "./components/Greet.vue";
-import Article from "./components/Article.vue";
+// import Article from "./components/Article.vue";
+import Popup from "./components/Popup.vue";
 
 export default {
   name: "App",
   components: {
     // Greet,
-    Article,
+    // Article,
+    Popup,
+  },
+  data() {
+    return {
+      showPopup: false,
+    };
   },
 };
 </script>

@@ -1,23 +1,22 @@
 <template>
-  <button @click="showPopup = true">Show Popup</button>
-  <Popup v-show="showPopup" @close="showPopup = false" />
+  <Input v-model="name" />
+  <h2>{{ name }}</h2>
 </template>
 
 <script>
 // import Greet from "./components/Greet.vue";
 // import Article from "./components/Article.vue";
-import Popup from "./components/Popup.vue";
+// import Popup from "./components/Popup.vue";
+import Input from "./components/Input.vue";
 
 export default {
   name: "App",
   components: {
-    // Greet,
-    // Article,
-    Popup,
+    Input,
   },
   data() {
     return {
-      showPopup: false,
+      name: "",
     };
   },
 };

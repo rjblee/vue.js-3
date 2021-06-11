@@ -1,18 +1,14 @@
 <template>
-  <Input v-model="name" />
-  <h2>{{ name }}</h2>
+  <NameList>< /NameList>
 </template>
 
 <script>
-// import Greet from "./components/Greet.vue";
-// import Article from "./components/Article.vue";
-// import Popup from "./components/Popup.vue";
-import Input from "./components/Input.vue";
+import NameList from "./components/NameList.vue";
 
 export default {
   name: "App",
   components: {
-    Input,
+    NameList,
   },
   data() {
     return {

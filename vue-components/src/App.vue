@@ -1,19 +1,18 @@
 <template>
-  <NameList>< /NameList>
+  <h4>App text</h4>
+  <ChildStyles />
 </template>
 
 <script>
-import NameList from "./components/NameList.vue";
+import ChildStyles from "./components/ChildStyles.vue";
 
 export default {
   name: "App",
   components: {
-    NameList,
+    ChildStyles,
   },
   data() {
-    return {
-      name: "",
-    };
+    return {};
   },
 };
 </script>
@@ -24,7 +23,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+}
+
+h4 {
+  color: blue;
 }
 </style>

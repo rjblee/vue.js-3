@@ -20,15 +20,19 @@ import axios from "axios";
 export default {
   name: CreatePost,
   data() {
-     return {
-        formData {
-           userId: '',
-           title: '',
-           body: '',
-
-        },
-     }
-  }
+    return {
+      formData: {
+        userId: "",
+        title: "",
+        body: "",
+      },
+    };
+  },
+  methods: {
+    createPost() {
+      axios.post("https://jsonplaceholder.typicode.com/posts", this.formData);
+    },
+  },
 };
 </script>
 

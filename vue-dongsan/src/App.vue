@@ -4,9 +4,9 @@
   </div>
   <div v-for="(product, i) in products" :key="i">
     <h4>{{ products[i] }}</h4>
-    <p>${{ price1 }}</p>
-    <button @click="increaseCount(i)">Click to Increase</button>
-    <span>Count: {{ count[i] }}</span>
+    <p>${{ prices[i] }}</p>
+    <button @click="increaseCount(i)">Report</button>
+    <span> Report Count: {{ count[i] }}</span>
     <hr />
   </div>
 </template>
@@ -21,9 +21,8 @@ export default {
   },
   data() {
     return {
-      price1: 1000,
-      price2: 1200,
-      price3: 900,
+      prices: [1000, 1200, 900],
+
       products: ["Chancellor Hall", "Folio", "Sitka"],
       menus: ["Home", "Shop", "About"],
       count: [0, 0, 0],

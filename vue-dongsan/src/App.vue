@@ -1,30 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <h2>Vue Dongsan</h2>
   <div>
-    <h4>{{ products[0] }}</h4>
+    <a class="menu" v-for="menu in menus" :key="menu">{{ menu }}</a>
+  </div>
+  <div v-for="(product, i) in products" :key="i">
+    <h4>{{ products[i] }}</h4>
     <p>${{ price1 }}</p>
-  </div>
-  <div>
-    <h4>{{ products[1] }}</h4>
-    <p>${{ price2 }}</p>
-  </div>
-  <div>
-    <h4>{{ products[2] }}</h4>
-    <p>${{ price3 }}</p>
-  </div>
-  <hr />
-  <div>
-    <h4 v-for="product in products">{{ product }}</h4>
-    <p>${{ price3 }}</p>
-  </div>
-  <div>
-    <h4>{{ products[2] }}</h4>
-    <p>${{ price3 }}</p>
-  </div>
-  <div>
-    <h4>{{ products[2] }}</h4>
-    <p>${{ price3 }}</p>
+    <button @click="increaseCount(i)">Click to Increase</button>
+    <span>Count: {{ count[i] }}</span>
+    <hr />
   </div>
 </template>
 
@@ -42,7 +25,14 @@ export default {
       price2: 1200,
       price3: 900,
       products: ["Chancellor Hall", "Folio", "Sitka"],
+      menus: ["Home", "Shop", "About"],
+      count: [0, 0, 0],
     };
+  },
+  methods: {
+    increaseCount(x) {
+      this.count[x] = this.count[x] + 1;
+    },
   },
 };
 </script>
@@ -54,6 +44,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.menu {
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
 }
 </style>

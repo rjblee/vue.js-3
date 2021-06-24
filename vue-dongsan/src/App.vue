@@ -10,8 +10,8 @@
     <a class="menu" v-for="menu in menus" :key="menu">{{ menu }}</a>
   </div>
   <div v-for="(product, i) in products" :key="i">
-    <img :src="`./assets/room${[i]}.jpg`" alt="" />
-    <!-- <img src="./assets/room1.jpg" alt="" /> -->
+    <img :src="getPic(i)" alt="" />
+    <!-- <img src="./assets/room2.jpg" alt="" /> -->
     <h4 @click="showModal = true">{{ products[i] }}</h4>
     <p>${{ prices[i] }}</p>
     <button @click="increaseCount(i)">Click to Report</button>
@@ -40,6 +40,10 @@ export default {
   methods: {
     increaseCount(x) {
       this.count[x] = this.count[x] + 1;
+    },
+    getPic(index) {
+      console.log("hi");
+      return "./assets/room" + index + ".jpg";
     },
   },
 };

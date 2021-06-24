@@ -3,6 +3,7 @@
     <div class="white-bg">
       <h4>Title</h4>
       <p>Description</p>
+      <button @click="showModal = false">Close</button>
     </div>
   </div>
   <div>

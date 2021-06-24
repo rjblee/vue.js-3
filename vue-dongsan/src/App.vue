@@ -64,7 +64,7 @@ div {
 .black-bg {
   width: 100%;
   height: 100%;
-  background: black;
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   padding: 20px;
 }

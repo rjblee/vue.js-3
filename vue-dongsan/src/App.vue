@@ -5,7 +5,7 @@
   <div v-for="(product, i) in products" :key="i">
     <h4>{{ products[i] }}</h4>
     <p>${{ prices[i] }}</p>
-    <button @click="increaseCount(i)">Report</button>
+    <button @click="increaseCount(i)">Click to Report</button>
     <span> Report Count: {{ count[i] }}</span>
     <hr />
   </div>
@@ -43,6 +43,29 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.black-bg {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: fixed;
+  padding: 20px;
+}
+
+.white-bg {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .menu {
